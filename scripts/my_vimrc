@@ -1,5 +1,3 @@
-#! /usr/bin/vim
-
 syntax on " enable syntax highting
 set number " include line numbers
 set relativenumber " include relative numbers
