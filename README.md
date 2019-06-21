@@ -1,3 +1,3 @@
 # CrUtils
 
-Chris Rands Utilities. Various (currently just two) bioinformatic utilities scripts and unit tests.
+Chris Rands Utilities. Various (currently just two) bioinformatic utility scripts and unit tests.
