@@ -1,0 +1,28 @@
+syntax on " enable syntax highting
+set number " include line numbers
+set relativenumber " include relative numbers
+set hlsearch " highlight searches
+set incsearch " incremental searches
+
+" make tabs behave like 4 spaces for indentation
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+set updatecount=20 " save backup while editing in vim after 20 cursor strokes
+
+set title " show filname at top
+
+set paste " prevent pasting from adding # to start of line
+
+colorscheme ron " nice dark colour scheme
+
+" filetype plugin indent on
+execute pathogen#infect()
+
+" snakemake configerations
+au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead *.rules set syntax=snakemake
+au BufNewFile,BufRead *.snakefile set syntax=snakemake
+au BufNewFile,BufRead *.snake set syntax=snakemake
+au BufNewFile,BufRead *.smk set syntax=snakemake

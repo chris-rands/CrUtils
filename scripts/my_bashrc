@@ -1,0 +1,29 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+#Aliases
+alias ls='ls --color=auto'
+alias ll='ls -hl'
+alias gtar='tar xvfz' # for .tar.gz
+alias btar='tar jxf' # for .tar.bz2
+alias nonascii='iconv -f utf-8 -t ascii//translit'
+alias vless='/usr/share/vim/vim80/macros/less.sh'
+
+# Slurm aliases
+alias mysinfo='sinfo -o "%n %c %D %m %e" | column -t'
+alias squeuecmd='squeue -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R %o %Z"'
+
+# ls colours
+eval "$(dircolors -b)"
+
+# Set ** syntax
+shopt -s globstar
+
+# Bash history file settings
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=1000000                   # big big history
+export HISTFILESIZE=1000000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
